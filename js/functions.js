@@ -1,11 +1,11 @@
 function stringLen (testString, maxLen) {
-  return (testString.length <= maxLen) ? true : false;
+  return testString.length <= maxLen;
 }
 
 
 //облегченный вариант задания
 function palindrom (testString) {
-  return (testString.toLowerCase() ===  testString.split('').reverse().join('').toLowerCase()) ? true : false;
+  return testString.toLowerCase() ===  testString.split('').reverse().join('').toLowerCase();
 }
 
 function takeNum (testString) {
@@ -14,11 +14,11 @@ function takeNum (testString) {
   }
   let changeStr = '';
   for (let i = 0; i < testString.length; i++) {
-    if (parseInt(testString[i]) >= 0) {
+    if (parseInt(testString[i], 10) >= 0) {
       changeStr += testString[i];
     }
   }
-  return parseInt(changeStr);
+  return parseInt(changeStr, 10);
 }
 
 function addStr (testString, maxLen, add) {
